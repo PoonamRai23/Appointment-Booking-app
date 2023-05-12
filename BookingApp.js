@@ -60,16 +60,16 @@ function showUserOnScreen(obj) {
   EditButton.value = "Edit";
   EditButton.onclick = () => {
     localStorage.removeItem(obj.Email);
-    // axios
-    //   .delete(
-    //     `https://crudcrud.com/api/5d2ae201480d486eac7c30eb4fb99149/Appointmentdata/${obj._id}`
-    //   )
-    //   .then((res) => {
-    //     console.log(res);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
+    axios
+      .delete(
+        `https://crudcrud.com/api/5d2ae201480d486eac7c30eb4fb99149/Appointmentdata/${obj._id}`
+      )
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
     parentElement.removeChild(childElement);
     document.getElementById("id-name").value = obj.Name;
     document.getElementById("id-email").value = obj.Email;
