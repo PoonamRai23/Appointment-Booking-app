@@ -19,9 +19,9 @@ function saveToLocalStorage(event) {
     .catch((err) => {
       console.log(err);
     });
-  // showUserOnScreen(obj);
+  showUserOnScreen(obj);
 }
-// window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", () => {
 //   axios
 //     .get(
 //       "https://crudcrud.com/api/5d2ae201480d486eac7c30eb4fb99149/Appointmentdata"
@@ -44,7 +44,7 @@ function showUserOnScreen(obj) {
   button.type = "button";
   button.value = "Delete";
   button.onclick = () => {
-    localStorage.removeItem(obj.Email);
+    // localStorage.removeItem(obj.Email);
     // axios
     //   .delete(
     //     `https://crudcrud.com/api/5d2ae201480d486eac7c30eb4fb99149/Appointmentdata/${obj._id}`
