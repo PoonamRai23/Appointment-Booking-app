@@ -44,15 +44,15 @@ function showUserOnScreen(obj) {
   button.type = "button";
   button.value = "Delete";
   button.onclick = () => {
-    // localStorage.removeItem(obj.Email);
-    // axios
-    //   .delete(
-    //     `https://crudcrud.com/api/5d2ae201480d486eac7c30eb4fb99149/Appointmentdata/${obj._id}`
-    //   )
-    //   .then((res) => {
-    //     // console.log(res);
-    //   })
-    //   .catch((err) => console.log(err));
+    localStorage.removeItem(obj.Email);
+    axios
+      .delete(
+        `https://crudcrud.com/api/5d2ae201480d486eac7c30eb4fb99149/Appointmentdata/${obj._id}`
+      )
+      .then((res) => {
+        // console.log(res);
+      })
+      .catch((err) => console.log(err));
     parentElement.removeChild(childElement);
   };
   const EditButton = document.createElement("input");
